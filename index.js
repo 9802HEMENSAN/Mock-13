@@ -13,14 +13,14 @@ app.use(cors())
 app.use(express.json())
  
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    res.send("Mock-13");
 })
 
 app.use("/user", UserRouter);
-app.use("/blogs", GetBlogsRouter)
+app.use("/blogs", GetBlogsRouter);
 app.use("/blog", PatchBlogsRouter);
 app.use(auth);
-app.use("/blog", BlogsRouter )
+app.use("/blog", BlogsRouter );
 
  
 app.listen(process.env.PORT , async () => {
